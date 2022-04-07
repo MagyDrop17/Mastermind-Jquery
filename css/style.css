@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html,
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+    display: inline-flex;
+    font-family: 'Raleway', sans-serif;
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    user-select: none;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.regles {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 265px;
+    padding-left: 160px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.title img {
+    width: 60px;
+    margin-left: 10px;
+}
+
+.lista {
+    margin-left: 30px;
+}
+
+ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+}
+
+ol li {
+    counter-increment: my-awesome-counter;
+}
+
+ol li::before {
+    content: counter(my-awesome-counter) ". ";
+    color: red;
+    font-weight: bold;
+}
+
+.svg {
+    width: 65%;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 35px 0px;
+    overflow: scroll;
+    overflow-x: hidden;
+    -ms-overflow-x: hidden;
+}
+
+svg {
+    background-color: #FBEEC1;
+    border-radius: 15px;
+    border: 3px solid white;
+    width: 750px;
+    height: 1220px;
+}
+
+circle {
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+}
+
+.default {
+    cursor: default;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+svg #text {
+    text-transform: uppercase;
+    animation: stroke 5s infinite alternate;
+    stroke: #365fa0;
+}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(54, 95, 160, 1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+    70% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(54, 95, 160, 1);
+    }
+    80% {
+        fill: rgba(72, 138, 20, 0);
+        stroke: rgba(54, 95, 160, 1);
+        stroke-width: 3;
+    }
+    100% {
+        fill: rgba(72, 138, 204, 1);
+        stroke: rgba(54, 95, 160, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    body {
+        height: 240vh;
+    }
+    .main {
+        flex-direction: column;
+    }
+    .regles {
+        margin-top: 50px;
+        width: 100%;
+        padding-left: 0px;
+    }
+    .svg {
+        width: 100%;
+        overflow: hidden;
+        overflow-x: hidden;
+        -ms-overflow-x: hidden;
+    }
+}

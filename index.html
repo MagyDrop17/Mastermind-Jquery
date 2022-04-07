@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- https://clrs.cc/ -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mastermind Daniel Valencia</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+    <link rel="shortcut icon" href="img/redhat.png">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="regles">
+
+            <div class="title">
+                <h1>MASTERMIND</h1>
+                <img src="img/redhat.png" alt="logo">
+            </div>
+
+            <div class="lista">
+                <h2>Regles📝: </h2>
+                <ol>
+                    <li>NOVA PARTIDA: Com be diu el nom, generarà una nova partida.</li>
+                    <li>ESBORRA: Esborra la linia en qüestió.</li>
+                    <li>COMPROVAR-HO: Comprova la linia, però hauran de tenir color totes les boles.</li>
+                    <li>Tens 9 intents.</li>
+                    <li>La sol·lució pot tenir boles del mateix color</li>
+                    <li>Per posar color, s'haurà de picar el color de la barra de la dreta i aquesta omplira la bola blanca a continuació</li>
+                    <li>Les boles negres indiquen que has posat una bola que, pero no et diu la posició, les blanques indiquen que has posat un color pero no esta en el llocs corresponent</li>
+                </ol>
+            </div>
+
+        </div>
+
+
+        <div class="svg">
+
+            <svg>
+
+                <image href="img/redhat.png" height="80" width="80" x="650" y="10"></image>
+
+                <g id="buttons">
+                    
+                    <g class="btn">
+                    
+                        <rect class="rect-buttons new-game" id="new" x="25px" y="25px" rx="15" ry="15" width="150px" height="50px" fill="#85144b" stroke-width="1"></rect>
+                        <text class="rect-text new-game" x="45px" y="55px" fill="white">NOVA PARTIDA</text>
+                    
+                    </g>
+                    
+                    <g class="btn">
+                    
+                        <rect class="rect-buttons delete-row" id="reset" x="250px" y="25px" rx="15" ry="15" width="150px" height="50px" fill="#85144b" stroke-width="1"></rect>
+                        <text class="rect-text delete-row" x="287.5px" y="55px" fill="white">ESBORRA</text>
+                    
+                    </g>
+    
+                    <g class="btn">
+                    
+                        <rect class="rect-buttons check-game" id="comprovar" x="475px" y="25px" rx="15" ry="15" width="150px" height="50px" fill="#85144b" ></rect>
+                        <text class="rect-text check-game" x="485px" y="55px" fill="white">COMPROVAR-HO</text>
+                    
+                    </g>
+    
+                </g>
+
+                <g id="colors"> 
+                
+                    <rect id="rect-colors" x="630px" y="100px" rx="15" ry="15" width="115px" height="865px " fill="#ccc092 " stroke-width="1"></rect>
+                    <circle class="circles-colors" id="circle-purple" cx="685px" cy="200px" r="35" fill="#B10DC9"></circle> <!-- purple -->
+                    <circle class="circles-colors" id="circle-blue" cx="685px" cy="310px" r="35" fill="#0074D9"></circle> <!-- blue -->
+                    <circle class="circles-colors" id="circle-red" cx="685px" cy="420px" r="35" fill="#FF4136"></circle> <!-- red -->
+                    <circle class="circles-colors" id="circle-orange" cx="685px" cy="530px" r="35 " fill="#FF851B"></circle> <!-- orange -->
+                    <circle class="circles-colors" id="circle-green" cx="685px" cy="640px" r="35" fill="#2ECC40"></circle> <!-- green -->
+                    <circle class="circles-colors" id="circle-yellow" cx="685px" cy="750px" r="35" fill="#FFDC00"></circle> <!-- yellow -->
+                    <circle class="circles-colors" id="circle-aqua" cx="685px" cy="860px" r="35" fill="#7FDBFF"></circle> <!-- aqua -->
+                
+                </g>
+
+                <g id="row-1">
+    
+                </g>
+
+                <g id="row-2">
+    
+                </g>
+                
+                <g id="row-3">
+    
+                </g>
+
+                <g id="row-4">
+    
+                </g>
+    
+                <g id="row-5">
+    
+                </g>
+    
+                <g id="row-6">
+    
+                </g>
+    
+                <g id="row-7">
+    
+                </g>
+    
+                <g id="row-8">
+    
+                </g>
+    
+                <g id="row-9">
+    
+                </g>
+
+                <g id="resultatBoles">
+    
+                </g>
+
+                <g id="resultat">
+    
+                </g>
+    
+            </svg>
+
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js "></script>
+    <script src="js/script.js "></script>
+
+</body>
+
+</html>
+
+</html>
